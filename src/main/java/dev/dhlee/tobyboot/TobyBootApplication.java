@@ -21,9 +21,12 @@ public class TobyBootApplication {
             servletContext.addServlet("hello", new HttpServlet() {
                 @Override
                 protected void service(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+                    String name = req.getParameter("name");
+
+
                     resp.setStatus(HttpStatus.OK.value());
                     resp.setHeader(HttpHeaders.CONTENT_TYPE, MediaType.TEXT_PLAIN_VALUE);
-                    resp.getWriter().print("Hello Servlet");
+                    resp.getWriter().print("Hello " + name);
                 }
             }).addMapping("/hello");
         });
