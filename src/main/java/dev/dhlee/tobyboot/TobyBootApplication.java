@@ -21,7 +21,7 @@ public class TobyBootApplication {
         applicationContext.registerBean(HelloController.class);
         applicationContext.refresh();
 
-        final ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();용
+        final ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
         final WebServer webServer = serverFactory.getWebServer(servletContext -> {
             servletContext.addServlet("frontcontroller", new HttpServlet() {
                 @Override
