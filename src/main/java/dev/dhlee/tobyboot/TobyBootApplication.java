@@ -1,5 +1,6 @@
 package dev.dhlee.tobyboot;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
@@ -22,11 +23,6 @@ public class TobyBootApplication {
     }
 
     public static void main(String[] args) {
-        MySpringApplication.run(TobyBootApplication.class, args);
+        SpringApplication.run(TobyBootApplication.class, args);
     }
-
-    // 기존 스프링 부트 코드
-//    public static void main(String[] args) {
-//        SpringApplication.run(TobyBootApplication.class, args);
-//    }
 }
