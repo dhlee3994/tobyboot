@@ -29,7 +29,7 @@ public class HelloApiTest {
                 .startsWith(MediaType.TEXT_PLAIN_VALUE));
 
         // body Hello Spring
-        assertEquals("Hello Spring", response.getBody());
+        assertEquals("*Hello Spring*", response.getBody());
     }
 
     @Test

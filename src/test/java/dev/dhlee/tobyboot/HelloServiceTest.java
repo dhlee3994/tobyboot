@@ -14,4 +14,13 @@ class HelloServiceTest {
 
         assertEquals("Hello Test", ret);
     }
+
+    @Test
+    void helloDecorator() {
+        final HelloDecorator decorator = new HelloDecorator(name -> name);
+
+        final String ret = decorator.sayHello("Test");
+
+        assertEquals("*Test*", ret);
+    }
 }
